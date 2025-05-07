@@ -57,7 +57,13 @@ public class Browser {
 	public static void maximize() {
 		Base.driver.manage().window().maximize();
 	}
-
+//reuse method to open appliction
+	
+	public static void openApplicationURL() {
+		Base.driver.get(Base.reader.getUrl());
+		}
+	
+	
 	public static byte[] takeScreenshot() {
 		try {
 			return ((TakesScreenshot)Base.driver).getScreenshotAs(OutputType.BYTES);
